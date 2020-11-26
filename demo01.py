@@ -33,3 +33,4 @@ print(int(a)+int(b))
 a = '我是谁'
 b = '憨憨龟'
 print(len(a)+len(b))
+print(123)
