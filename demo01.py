@@ -49,7 +49,7 @@ a = (1,2,3,4,5,5,5)
 #切片
 #print(a[0:4])
 print(a[0:])
-"""
+
 
 #数组
 #a = [1,2,3,4,5,5,5]
@@ -74,3 +74,14 @@ a["sex"] = 'man' #修改
 #a.update(sex='woman') 修改
 print(a["name"],a['hight'],a['sex']) #取值
 
+#数组和字典的删除
+del a["hight"]
+print(a)
+"""
+
+a = input('请输入姓名:')
+b = input('请输入年纪:')
+c = input('请输入性别:')
+
+d = {'姓名':a,'年纪':b,'性别':c}
+print(d)
