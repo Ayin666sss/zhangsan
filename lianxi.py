@@ -69,4 +69,5 @@ if len(user['password'])<6 or len(user['password'])>12:
 
 print('注册成功')
 '''
-    
+
+print(1)

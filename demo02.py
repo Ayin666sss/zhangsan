@@ -86,3 +86,6 @@ for i in a:
 
 for i in range(100):
     print(i)
+
+
+print(1)
