@@ -53,21 +53,53 @@ for a in range(1,31):
 
 '''注册账号
 user = {}
-az = ['a','b','c','d']
 username = input('请输入账号')
 password = input('请输入密码')
 user['username'] = username
 user['password'] = password
 
-#a = len(user['username'])
-#print(a)
-
-if len(user['username'])<5 or len(user['username'])>8:
-    print('账号不合法')
-if len(user['password'])<6 or len(user['password'])>12:
-    print('密码不合法')
-
-print('注册成功')
+if len(user['username'])>5 and len(user['username'])<8:
+    if user['username'][0] in 'qwertyuioplkjhgfdsazxcvbnm':
+        if len(user['password'])>6 and len(user['password'])<12:
+            print('注册成功')
+        else:
+            print('密码输入不合法')
+    else:
+        print('输入的账号不是以小写开头')
+else:
+    print('输入的账号长度不合法')
 '''
 
-print(1)
+user = {}
+def yzusername (username):
+    user['username'] = username
+    if len(user['username'])>5 and len(user['username'])<8:
+        if user['username'][0] in 'qwertyuioplkjhgfdsazxcvbnm':
+            return True
+        else:
+            print('输入的账号不是以小写开头')
+    else:
+        print('输入的账号长度不合法')
+
+def yzpassword (password):
+    user['password'] = password
+    if len(user['password'])>6 and len(user['password'])<12:
+        return True
+    else:
+        print('密码输入长度不合法')
+
+a = input('请输入账号')
+b = input('请输入密码')
+c = yzusername(a)
+if c is True:
+    d = yzpassword(b)
+    if d is True:
+        print('注册成功',user['username'],user['password'])
+        
+
+
+    
+
+
+    
+        
